@@ -1,18 +1,11 @@
-#include<iostream>
-using namespace std;
-
-void recursive(int n)
-{
-    if(n==0)
-    {
-        return;
+int firstocc(int arr[], int n, int i, int key){
+    if(i == n){
+        return -1;
     }
-    cout<<n;
-    recursive(n-1);
-}
-int main()
-{
-    int n=5;
-    recursive(n);
-    return 0;
+
+    if(arr[i] == key){
+        return i;
+    }
+    firstocc(arr, n,i+1,key);  
+
 }

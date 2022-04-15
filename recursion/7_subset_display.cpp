@@ -16,10 +16,10 @@ void subset(vector<char> input,vector<char> output, int i)
         return;
     }
 
-    subset(input,output,i+1);
-    
-
+    subset(input,output,i+1);  
     output.push_back(input[i]);
+
+    
     subset(input,output,i+1);
 
     
